@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./batch.sql:/docker-entrypoint-initdb.d/batch.sql
+      - csv_volume:/usr/share/app
+    ports:
+      - '5432:5432'
+volumes:
+  csv_volume:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /root/hackreactor/SDC/QA-API-Service/csv
+networks:
+  default:
+    external:
+      name: sdc
