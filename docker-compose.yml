@@ -17,7 +17,7 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /root/hackreactor/SDC/QA-API-Service/csv
+      device: /home/ubuntu/csv
 networks:
   default:
     name: sdc
