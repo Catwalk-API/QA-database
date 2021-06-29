@@ -20,5 +20,4 @@ volumes:
       device: /root/hackreactor/SDC/QA-API-Service/csv
 networks:
   default:
-    external:
-      name: sdc
+    name: sdc

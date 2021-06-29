@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS qa_sdc;
-
 CREATE DATABASE qa_sdc;
 
 \c qa_sdc;
