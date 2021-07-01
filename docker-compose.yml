@@ -26,4 +26,5 @@ volumes:
       device: /home/ubuntu/csv
 networks:
   default:
-    name: sdc
+    external:
+        name: sdc
