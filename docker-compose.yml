@@ -11,12 +11,6 @@ services:
       - csv_volume:/usr/share/app
     ports:
       - '5432:5432'
-  web-app:
-    image: aldeebob/qa-api-service
-    depends_on:
-      - db
-    ports:
-      - '5000:5000'
 volumes:
   csv_volume:
     driver: local
